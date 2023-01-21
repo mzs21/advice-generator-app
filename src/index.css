@@ -1,18 +1,41 @@
+/* 
+
+1.  FallBack.tsx
+2.  AdviceBox.tsx 
+3.  Divider.tsx 
+4.  Button.tsx 
+5.  Footer.tsx
+
+ */
+
 @import url("https://fonts.google.com/specimen/Manrope");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  footer {
+    @apply bg-white py-1 sm:py-4 flex justify-center space-x-2 hover:space-x-4 fixed left-0 right-0 bottom-0;
+  }
+}
+
 @layer components {
+  /* FallBack.tsx */
+
   .fallback {
     @apply text-center text-[#cee3e9] uppercase font-manrope font-extrabold text-xl;
   }
   .error {
     @apply text-center text-[#cee3e9] uppercase font-manrope font-extrabold text-xl;
   }
+
+  /* AdviceBox.tsx */
+
   .advice-box {
-    @apply grid place-content-center gap-6 -mt-2 mx-10 mb-0 rounded-lg p-10 bg-[#1f2632] relative;
+    @apply grid place-content-center gap-2 sm:gap-6  mx-10 mb-0 rounded-lg p-10 bg-[#1f2632] relative;
   }
+
+  /* AdviceData.tsx */
 
   .advice-no {
     @apply text-center text-[#52ffa8] tracking-widest uppercase;
@@ -22,6 +45,8 @@
     @apply text-center text-[#cee3e9] font-manrope font-extrabold text-xl sm:text-[28px];
   }
 
+  /* Divider.tsx */
+
   .pattern-mobile {
     @apply mb-10 md:hidden place-self-center;
   }
@@ -30,11 +55,24 @@
     @apply mb-10 hidden md:block place-self-center;
   }
 
+  /* Button.tsx */
+
   .dice {
     @apply grid place-content-center place-self-center w-16 h-16 rounded-[50%] bg-[#52ffa8] -bottom-8 absolute;
 
     &:hover {
       @apply cursor-pointer shadow-[_0px_0px_40px_#52ffa8] shadow-[#52ffa8] transition duration-200 ease-in-out;
+    }
+  }
+
+  /* Footer.tsx */
+
+  .github,
+  .linkedIn {
+    @apply w-8 h-8;
+
+    &:hover {
+      @apply scale-105 sm:scale-150;
     }
   }
 }

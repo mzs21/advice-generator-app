@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import DiceIcon from "../assets/images/icon-dice.svg";
 import PatternDividerDesktop from "../assets/images/pattern-divider-desktop.svg";
 import PatternDividerMobile from "../assets/images/pattern-divider-mobile.svg";
-
-
+import GithubLogo from "../assets/logos/GitHubLogo.png";
+import LinkedInLogo from "../assets/logos/LinkedInLogo.png";
 interface AdviceDataProps {
   id: number;
   advice: string;
@@ -48,6 +48,17 @@ const AdviceBox = () => {
           </div>
         </>
       )}
+      <footer className="footer">
+        <a
+          href="https://github.com/mzs21/advice-app-generator"
+          title="Github Repo"
+        >
+          <img src={GithubLogo} alt="" className="github" />
+        </a>
+        <a href="https://www.linkedin.com/in/mdmzs/" title="Find me here">
+          <img src={LinkedInLogo} alt="" className="linkedIn" />
+        </a>
+      </footer>
     </div>
   );
 };

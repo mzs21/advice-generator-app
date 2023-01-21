@@ -5,6 +5,7 @@ import AdviceData from "./AdviceData";
 import Button from "./Button";
 import Divider from "./Divider";
 import FallBack from "./FallBack";
+import Footer from "./Footer";
 
 const AdviceBox = () => {
   const { data, refetch, isError, isLoading, error } = useQuery("advice", () =>
@@ -40,6 +41,7 @@ const AdviceBox = () => {
           <AdviceData dataID={data.id} dataAdvice={data.advice} />
           <Divider />
           <Button />
+          <Footer/>
         </>
       )}
     </div>
