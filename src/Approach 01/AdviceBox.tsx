@@ -1,10 +1,14 @@
-import { SetStateAction, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import DiceIcon from "../assets/images/icon-dice.svg";
 import PatternDividerDesktop from "../assets/images/pattern-divider-desktop.svg";
 import PatternDividerMobile from "../assets/images/pattern-divider-mobile.svg";
 import GithubLogo from "../assets/logos/GitHubLogo.png";
 import LinkedInLogo from "../assets/logos/LinkedInLogo.png";
 interface AdviceDataProps {
+  slip: SlipProps;
+}
+
+interface SlipProps {
   id: number;
   advice: string;
 }
@@ -18,7 +22,7 @@ const AdviceBox = () => {
 
   let fetchAdvice: () => Promise<void> = async () => {
     const res: Response = await fetch(URL);
-    const data: SetStateAction<AdviceDataProps | undefined> = await res.json();
+    const data = await res.json();
 
     setAdvice(data);
   };
@@ -29,10 +33,10 @@ const AdviceBox = () => {
 
   return (
     <div className="advice-box">
-      {advice && (
+      {advice?.slip && (
         <>
-          <p className="advice-no">Advice #{advice.id}</p>
-          <q className="advice-text">{advice.advice}</q>
+          <p className="advice-no">Advice #{advice.slip.id}</p>
+          <q className="advice-text">{advice.slip.advice}</q>
           <img
             src={PatternDividerMobile}
             alt="pattern-divider-mobile"
