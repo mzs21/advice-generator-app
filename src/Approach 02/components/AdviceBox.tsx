@@ -41,7 +41,7 @@ const AdviceBox = () => {
           <AdviceData dataID={data.id} dataAdvice={data.advice} />
           <Divider />
           <Button />
-          <Footer/>
+          <Footer />
         </>
       )}
     </div>
