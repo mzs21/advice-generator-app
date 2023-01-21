@@ -1,0 +1,40 @@
+@import url("https://fonts.google.com/specimen/Manrope");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .fallback {
+    @apply text-center text-[#cee3e9] uppercase font-manrope font-extrabold text-xl;
+  }
+  .error {
+    @apply text-center text-[#cee3e9] uppercase font-manrope font-extrabold text-xl;
+  }
+  .advice-box {
+    @apply grid place-content-center gap-6 -mt-2 mx-10 mb-0 rounded-lg p-10 bg-[#1f2632] relative;
+  }
+
+  .advice-no {
+    @apply text-center text-[#52ffa8] tracking-widest uppercase;
+  }
+
+  .advice-text {
+    @apply text-center text-[#cee3e9] font-manrope font-extrabold text-xl sm:text-[28px];
+  }
+
+  .pattern-mobile {
+    @apply mb-10 md:hidden place-self-center;
+  }
+
+  .pattern-desktop {
+    @apply mb-10 hidden md:block place-self-center;
+  }
+
+  .dice {
+    @apply grid place-content-center place-self-center w-16 h-16 rounded-[50%] bg-[#52ffa8] -bottom-8 absolute;
+
+    &:hover {
+      @apply cursor-pointer shadow-[_0px_0px_40px_#52ffa8] shadow-[#52ffa8] transition duration-200 ease-in-out;
+    }
+  }
+}
