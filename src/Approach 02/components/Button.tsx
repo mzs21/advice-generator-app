@@ -5,7 +5,7 @@ import getAdvice from "../utilities/getAdviceAPI";
 const Button = () => {
   const { refetch } = useQuery("advice", () => getAdvice());
   return (
-    <div className="dice" onClick={refetch}>
+    <div className="dice" onClick={() => refetch()}>
       <img src={DiceIcon} alt="dice" />
     </div>
   );
