@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [](https://github.com/mzs21/advice-app-generator)
-- Live Site URL: [](https://mzs21.github.io/advice-app-generator/)
+- Solution URL: [GitHub](https://github.com/mzs21/advice-app-generator)
+- Live Site URL: [Live](https://mzs21.github.io/advice-app-generator/)
 
 ## My process
 
