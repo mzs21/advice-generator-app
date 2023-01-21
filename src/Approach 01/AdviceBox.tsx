@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { SetStateAction, useEffect, useState } from "react";
 import DiceIcon from "../assets/images/icon-dice.svg";
 import PatternDividerDesktop from "../assets/images/pattern-divider-desktop.svg";
 import PatternDividerMobile from "../assets/images/pattern-divider-mobile.svg";
@@ -12,15 +12,15 @@ interface AdviceDataProps {
 const URL = "https://api.adviceslip.com/advice";
 
 const AdviceBox = () => {
-  const [advice, setAdvice] = useState<AdviceDataProps>({});
+  const [advice, setAdvice] = useState<AdviceDataProps>();
 
   console.log(advice);
 
   let fetchAdvice: () => Promise<void> = async () => {
     const res: Response = await fetch(URL);
-    const data: Object = await res.json();
+    const data: SetStateAction<AdviceDataProps | undefined> = await res.json();
 
-    setAdvice(data.slip);
+    setAdvice(data);
   };
 
   useEffect(() => {
