@@ -8,13 +8,12 @@ import FallBack from "./FallBack";
 import Footer from "./Footer";
 
 const AdviceBox = () => {
-  const { data, refetch, isError, isLoading, error } = useQuery("advice", () =>
+  const { data, isError, isLoading, error } = useQuery("advice", () =>
     getAdvice()
   );
 
   // On the left side, the parameters are -
   // - "data" where fetched data will be stored
-  // - "refetch" will work when retriving data by clicking,
   // - "isError" checks if there is an error,
   // - "isLoading" is basically the data is loading,
   // - "error" is the error
