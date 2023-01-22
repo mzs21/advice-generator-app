@@ -29,7 +29,7 @@ const AdviceBox = () => {
 
   useEffect(() => {
     fetchAdvice();
-  }, []);
+  }, []); // [] means that this effect will only run once || componentDidMount()
 
   return (
     <div className="advice-box">
