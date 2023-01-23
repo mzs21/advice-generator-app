@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, SetStateAction } from "react";
 import DiceIcon from "../assets/images/icon-dice.svg";
 import PatternDividerDesktop from "../assets/images/pattern-divider-desktop.svg";
 import PatternDividerMobile from "../assets/images/pattern-divider-mobile.svg";
@@ -22,7 +22,7 @@ const AdviceBox = () => {
 
   let fetchAdvice: () => Promise<void> = async () => {
     const res: Response = await fetch(URL);
-    const data = await res.json();
+    const data: SetStateAction<AdviceDataProps | undefined> = await res.json();
 
     setAdvice(data);
   };
