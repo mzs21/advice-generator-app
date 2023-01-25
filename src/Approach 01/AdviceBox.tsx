@@ -1,4 +1,4 @@
-import { useEffect, useState, SetStateAction } from "react";
+import { SetStateAction, useEffect, useState } from "react";
 import DiceIcon from "../assets/images/icon-dice.svg";
 import PatternDividerDesktop from "../assets/images/pattern-divider-desktop.svg";
 import PatternDividerMobile from "../assets/images/pattern-divider-mobile.svg";
@@ -33,7 +33,7 @@ const AdviceBox = () => {
 
   return (
     <div className="advice-box">
-      {advice?.slip && (
+      {advice?.slip ? (
         <>
           <p className="advice-no">Advice #{advice.slip.id}</p>
           <q className="advice-text">{advice.slip.advice}</q>
@@ -51,7 +51,7 @@ const AdviceBox = () => {
             <img src={DiceIcon} alt="dice" />
           </div>
         </>
-      )}
+      ) : null}
       <footer className="footer">
         <a
           href="https://github.com/mzs21/advice-app-generator"
