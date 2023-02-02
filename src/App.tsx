@@ -2,7 +2,13 @@ import { QueryClient, QueryClientProvider } from "react-query";
 // import AdviceBox from "./Approach 01/AdviceBox";
 import AdviceBox from "./Approach 02/components/AdviceBox";
 const App = () => {
-  const client = new QueryClient();
+  const client = new QueryClient({
+    defaultOptions: {
+      queries: {
+        refetchOnWindowFocus: false, // default: true
+      },
+    },
+  });
   // The value which we will pass through QueryClientProvider is created with QueryClient.
 
   return (
