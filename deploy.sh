@@ -23,7 +23,7 @@ git commit -m 'deploy'
 # if you are deploying to https://mzs21.github.io
 # git push -f git@github.com:mzs21/mzs21.github.io.git main
 
-# if you are deploying to https://mzs21.github.io/advice-app-generator
-# git push -f git@github.com:mzs21/<advice-app-generator.git main:gh-pages
+# if you are deploying to https://mzs21.github.io/advice-generator-app
+# git push -f git@github.com:mzs21/<advice-generator-app.git main:gh-pages
 
 cd -
