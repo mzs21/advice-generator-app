@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <a
-        href="https://github.com/mzs21/advice-app-generator"
+        href="https://github.com/mzs21/advice-generator-app"
         title="Github Repo"
       >
         <img src={GithubLogo} alt="" className="github" />
