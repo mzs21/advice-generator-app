@@ -4,5 +4,5 @@ import { VitePWA } from "vite-plugin-pwa";
 
 export default defineConfig({
   plugins: [react()],
-  base: "/advice-app-generator",
+  base: "/advice-generator-app",
 });
